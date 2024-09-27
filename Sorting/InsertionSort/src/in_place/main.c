@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include "selection.h"
+#include "insertion.h"
 
 
 int main() {
@@ -12,7 +12,7 @@ int main() {
     for (int i = 0; i < array_size; i++) {
         scanf("%d", &array[i]);
     }
-    SelectionSort(array, array_size);
+    InsertionSort(array, array_size);
     for (int i = 0; i < array_size; i++) {
         printf("%d, ", array[i]);
     }

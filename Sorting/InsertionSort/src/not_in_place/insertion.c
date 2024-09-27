@@ -3,7 +3,7 @@
 #include <stdbool.h>
 
 
-int* InsertionSort(int* array, int array_size){
+int* InsertionSort(int* array, int array_size) {
     int* sorted_array = calloc(array_size, sizeof(int));
     int sorted_array_actual_size = 0;
     for (int i = 0; i < array_size; i++) {

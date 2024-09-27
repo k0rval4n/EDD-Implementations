@@ -1,2 +1,6 @@
 *.Identifier
-/obj
+obj/
+*.vscode
+# Sorting
+Sorting/*/in_place
+Sorting/*/not_in_place

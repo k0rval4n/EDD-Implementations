@@ -9,7 +9,7 @@
 ###############################################################################
 
 # Directorios que serán compilados a un programa
-PROGRAMS=.
+PROGRAMS=not_in_place in_place
 
 # Directorios con elementos de uso común
 COMMON=

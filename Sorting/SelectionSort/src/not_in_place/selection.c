@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 
-int* SelectionSort(int* array, int array_size){
+int* SelectionSort(int* array, int array_size) {
     int* sorted_array = calloc(array_size, sizeof(int));
     int elements_moved = 0;
     while (elements_moved < array_size) {

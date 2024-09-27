@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 
-void SelectionSort(int* array, int array_size){
+void SelectionSort(int* array, int array_size) {
     for (int i = 0; i <= array_size - 2; i++) {
         int min_element_index = i;
         for (int j = i + 1; j <= array_size - 1; j++) {

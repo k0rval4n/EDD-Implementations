@@ -14,7 +14,7 @@ int main() {
     }
     int* sorted_array = SelectionSort(array, array_size);
     for (int i = 0; i < array_size; i++) {
-        printf("%d, ", array[i]);
+        printf("%d, ", sorted_array[i]);
     }
     free(array);
     free(sorted_array);

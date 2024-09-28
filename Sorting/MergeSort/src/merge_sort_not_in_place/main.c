@@ -5,6 +5,7 @@
 #include <sys/time.h>
 #include "insertion.h"
 #include "merge_sort.h"
+#include "to_free_list.h"
 
 
 int main() {
@@ -17,13 +18,24 @@ int main() {
     }
     struct timeval stop, start;
     gettimeofday(&start, NULL);
-    int* merged_array = MergeSort(array, array_size);
+    ToFreeList to_free_list = {
+        .head = NULL,
+        .tail = NULL
+    };
+    int* merged_array = MergeSort(array, array_size, &to_free_list);
     gettimeofday(&stop, NULL);
     printf("\ntook %lf seconds\n", ((stop.tv_sec - start.tv_sec) * 1000000.0 + stop.tv_usec - start.tv_usec) / 1000000.0);
     for (int i = 0; i < array_size ; i++) {
         printf("%d, ", merged_array[i]);
     }
     free(array);
-    free(merged_array);
+    ToFreeNode* actual_node = to_free_list.head;
+    while (actual_node != NULL)
+    {
+        ToFreeNode* next_node = actual_node->next_node;
+        free(actual_node->merged_array_to_free);
+        free(actual_node);
+        actual_node = next_node;
+    }
     return 0;
 }

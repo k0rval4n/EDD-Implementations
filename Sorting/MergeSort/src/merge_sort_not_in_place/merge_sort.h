@@ -1,0 +1,1 @@
+int* MergeSort(int* array, int array_size);

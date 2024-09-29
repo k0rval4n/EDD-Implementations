@@ -4,3 +4,5 @@ obj/
 # Sorting
 Sorting/*/in_place
 Sorting/*/not_in_place
+Sorting/*/merge
+Sorting/*/merge_sort_not_in_place
